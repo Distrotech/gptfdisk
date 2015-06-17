@@ -35,7 +35,7 @@ gdisk:	$(LIB_OBJS) gdisk.o gpttext.o
 
 cgdisk: $(LIB_OBJS) cgdisk.o gptcurses.o
 #	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o $(LDFLAGS) -luuid -lncurses -o cgdisk
-	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o $(LDFLAGS) -licuio -licuuc -luuid -lncurses -lpthread -o cgdisk
+	$(CXX) $(LIB_OBJS) cgdisk.o gptcurses.o $(LDFLAGS) -licuio -licuuc -luuid -ltinfo -lncurses -lpthread -o cgdisk
 
 sgdisk: $(LIB_OBJS) sgdisk.o gptcl.o
 #	$(CXX) $(LIB_OBJS) sgdisk.o gptcl.o $(LDFLAGS) -luuid -lpopt -o sgdisk
